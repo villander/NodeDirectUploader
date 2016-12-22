@@ -23,10 +23,15 @@ app.use(express.static('./public'));
 app.engine('html', require('ejs').renderFile);
 app.listen(process.env.PORT || 3000);
 
+const AWS_ACCESS_KEY = 'AKIAILR46ZHLPIUZ5YSQ';
+const AWS_SECRET_KEY = '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';
+const S3_BUCKET = 'dev.remoto.me';
+
+aws.config.update({ accessKeyId: AWS_ACCESS_KEY, secretAccessKey: AWS_SECRET_KEY, "region": "us-east-1" });
+
 /*
  * Load the S3 information from the environment variables.
  */
-const S3_BUCKET = process.env.S3_BUCKET;
 
 /*
  * Respond to GET requests to /account.

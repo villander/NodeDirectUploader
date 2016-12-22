@@ -4,7 +4,11 @@
   "private": true,
   "dependencies": {
     "aws-sdk": "2.x",
+    "cors": "^2.8.1",
     "ejs": "2.x",
-    "express": "4.x"
+    "es6-promise": "^4.0.5",
+    "express": "4.x",
+    "isomorphic-fetch": "^2.2.1",
+    "request": "^2.79.0"
   }
 }
